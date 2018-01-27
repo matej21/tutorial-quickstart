@@ -1,3 +1,10 @@
+extensions:
+	console: Contributte\Console\DI\ConsoleExtension
+	migrations: Nextras\Migrations\Bridges\NetteDI\MigrationsExtension
+migrations:
+	dir: %appDir%/../migrations
+	driver: mysql
+	dbal: nette
 parameters:
 
 
@@ -18,3 +25,4 @@ security:
 
 services:
 	router: App\RouterFactory::createRouter
+	- App\Components\CommentFormControlFactory
